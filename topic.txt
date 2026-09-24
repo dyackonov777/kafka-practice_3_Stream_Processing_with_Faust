@@ -1,0 +1,47 @@
+# =========================================================
+# Создание Kafka-топиков
+# =========================================================
+
+
+# Входящие сообщения
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic messages --partitions 3 --replication-factor 2
+
+
+# Сообщения после обработки
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic filtered_messages --partitions 3 --replication-factor 2
+
+
+# События блокировки пользователей
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic blocked_users --partitions 3 --replication-factor 2
+
+
+# Динамический список запрещённых слов
+./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic banned_words --partitions 1 --replication-factor 2
+
+
+
+# =========================================================
+# Проверка созданных топиков
+# =========================================================
+
+
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic messages
+
+
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic filtered_messages
+
+
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic blocked_users
+
+
+./bin/kafka-topics.sh --describe --bootstrap-server localhost:9092 --topic banned_words
+
+
+
+# =========================================================
+# Список всех Kafka-топиков
+# =========================================================
+
+
+./bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+`
