@@ -96,8 +96,8 @@ kafka-faust-moderation/
 │   ├── architecture.md
 │   ├── kafka.md
 │   ├── stateful-processing.md
-│   ├── testing.md
-│   └── docker.md
+│   └── testing.md
+│   
 │
 ├── Dockerfile
 ├── docker-compose.yml
